@@ -1043,6 +1043,7 @@ git rebase 基线分支 开发分支
 
 
 
+
 ``` shell
 # 示例1:
 git checkout bugFix
@@ -1102,14 +1103,15 @@ rebase合并分支的特点:
 ![](笔记图片/版本线是直的使用rebase合并分支的方法.png)
 
 
-**正确方法应该是: 直接在需要更新的分支上rebase, 这样分支指针只会简单的移动**
+**正确方法应该是:** 直接在需要更新的分支上rebase, 这样分支指针只会简单的移动
 ``` shell
+git checkout main
 # 当前在main分支上, 它需要得到bugFix的所有新commit
 git rebase bugFix
 ```
 
-上述操作等价于:
 
+**切忌使用一下这种简写方式, 它会打乱bugFix的代码, 造成未知错误** 
 ``` shell
 git rebase bugFix main
 ```
