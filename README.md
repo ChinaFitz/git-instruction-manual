@@ -1111,7 +1111,7 @@ git rebase bugFix
 ```
 
 
-**切忌使用一下这种简写方式, 它会打乱bugFix的代码, 造成未知错误** 
+**切忌使用以下这种简写方式, 它会打乱bugFix的代码, 造成未知错误** 
 ``` shell
 git rebase bugFix main
 ```
